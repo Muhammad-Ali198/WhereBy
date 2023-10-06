@@ -33,9 +33,9 @@ const Index = ({ children }) => {
         </Drawer>
       </nav>
 
-      <Box component="main" sx={{ p: 2, background: "pink", width: "100vw", height: "100vh" }}>
+      <Box component="main" sx={{ background: "pink", width: "100vw", height: "100vh" }}>
         <Toolbar />
-        <h3>asasdasd</h3>
+        {/* <h3>asasdasd</h3> */}
         {children}
       </Box>
     </Box>
