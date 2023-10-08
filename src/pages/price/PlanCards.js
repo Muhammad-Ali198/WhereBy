@@ -26,16 +26,9 @@ const PlanCards = () => {
   return (
     <Container maxWidth={"lg"}>
       <Box bgcolor={""}>
-        <Grid container direction="row" justifyContent="center" alignItems="center">
-          <Grid
-            item
-            xs={12}
-            md={4}
-            bgcolor={""}
-            display={"flex"}
-            justifyContent={"center"}
-            alignItems={"centers"}>
-            <Paper sx={{ mx: 1, width: "90%" }} elevation={10}>
+        <Grid spacing={2} container>
+          <Grid item xs={12} md={4} lg={4}>
+            <Paper sx={{ width: "100%", borderRadius: 4 }} elevation={6}>
               <Box p={2}>
                 <Typography variant="h5" color={"#211375"}>
                   Free
@@ -62,7 +55,7 @@ const PlanCards = () => {
                   </Typography>
                 ))}
               </Box>
-              <Box display={"flex"} justifyContent={"center"} mb={2}>
+              <Box display={"flex"} justifyContent={"center"} p={1}>
                 <Button variant="outlined" sx={{ color: "#211375", px: "6rem", py: "10px" }}>
                   Get started
                 </Button>
@@ -70,15 +63,8 @@ const PlanCards = () => {
             </Paper>
           </Grid>
 
-          <Grid
-            item
-            xs={12}
-            md={4}
-            bgcolor={""}
-            display={"flex"}
-            justifyContent={"center"}
-            alignItems={"centers"}>
-            <Paper sx={{ mx: 1, width: "90%" }} elevation={10}>
+          <Grid item xs={12} md={4} lg={4} bgcolor={""}>
+            <Paper sx={{ width: "100%", borderRadius: 4 }} elevation={6}>
               <Box p={2}>
                 <Typography variant="h5" color={"#211375"}>
                   Pro
@@ -105,7 +91,7 @@ const PlanCards = () => {
                   </Typography>
                 ))}
               </Box>
-              <Box display={"flex"} justifyContent={"center"} mb={2}>
+              <Box display={"flex"} justifyContent={"center"} p={1}>
                 <Button variant="outlined" sx={{ color: "#211375", px: "6rem", py: "10px" }}>
                   Get started
                 </Button>
@@ -113,15 +99,8 @@ const PlanCards = () => {
             </Paper>
           </Grid>
 
-          <Grid
-            item
-            xs={12}
-            md={4}
-            bgcolor={""}
-            display={"flex"}
-            justifyContent={"center"}
-            alignItems={"centers"}>
-            <Paper sx={{ mx: 1, width: "90%" }} elevation={10}>
+          <Grid item xs={12} md={4} lg={4} bgcolor={""}>
+            <Paper sx={{ width: "100%", borderRadius: 4 }} elevation={6}>
               <Box p={2}>
                 <Typography variant="h5" color={"#211375"}>
                   Business
@@ -148,10 +127,16 @@ const PlanCards = () => {
                   </Typography>
                 ))}
               </Box>
-              <Box display={"flex"} justifyContent={"center"} mb={2}>
+              <Box display={"flex"} justifyContent={"center"} p={1}>
                 <Button
                   variant="contained"
-                  sx={{ backgroundColor: "#211375", px: "6rem", py: "10px" }}>
+                  sx={{
+                    width: "90%",
+                    backgroundColor: "#211375",
+                    px: "6rem",
+                    py: "10px",
+                    whiteSpace: "nowrap"
+                  }}>
                   Try 14 days free
                 </Button>
               </Box>

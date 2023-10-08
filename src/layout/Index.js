@@ -33,7 +33,9 @@ const Index = ({ children }) => {
         </Drawer>
       </nav>
 
-      <Box component="main" sx={{ background: "pink", width: "100vw", height: "100vh" }}>
+      <Box
+        component="main"
+        sx={{ background: "pink", width: "100%", height: "100vh", overflowX: "hidden" }}>
         <Toolbar />
         {/* <h3>asasdasd</h3> */}
         {children}
