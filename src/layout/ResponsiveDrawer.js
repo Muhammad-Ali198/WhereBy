@@ -17,7 +17,7 @@ const ResponsiveDrawer = ({ handleDrawerToggle }) => {
       </Typography>
       <Divider />
       <List>
-        {["Dashboard", "Contact", "Settings"].map((item) => (
+        {["Dashboard", "Contact", "Settings", "Price"].map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText primary={item} />

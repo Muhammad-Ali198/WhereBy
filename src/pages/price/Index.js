@@ -4,6 +4,12 @@ import Hero from "./Hero";
 import PlanCards from "./PlanCards";
 import TrustedCompanies from "./TrustedCompanies";
 import PlanTable from "./PlanTable";
+import LearnMore from "./LearnMore";
+import CollaboratorsReview from "./CollaboratorsReview";
+import Integrated from "./Integrated";
+import FrequentlyQuestions from "./FrequentlyQuestions";
+import LearnMore1 from "./LearnMore1";
+import PriceFooter from "./PriceFooter";
 
 const Index = () => {
   return (
@@ -12,6 +18,12 @@ const Index = () => {
       <PlanCards />
       <TrustedCompanies />
       <PlanTable />
+      <LearnMore />
+      <CollaboratorsReview />
+      <Integrated />
+      <FrequentlyQuestions />
+      <LearnMore1 />
+      <PriceFooter />
     </Box>
   );
 };

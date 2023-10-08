@@ -3,8 +3,8 @@ import {
   Box,
   Button,
   Table,
-  TableBody,
   TableCell,
+  TableBody,
   TableContainer,
   TableFooter,
   TableHead,
@@ -13,6 +13,25 @@ import {
 } from "@mui/material";
 import React from "react";
 import Export6 from "../../assets/images/Export6.svg";
+import { styled } from "@mui/system";
+
+const StyledTableCell = styled(TableCell)({
+  "&.MuiTableCell-head": {
+    backgroundColor: "#000",
+    color: "#fff"
+  },
+  "&.MuiTableCell-body": {
+    fontSize: 14
+  }
+});
+
+const StyledTableRow = styled(TableRow)({
+  "&:nth-of-type(odd)": {
+    backgroundColor: "#f2f2f2" // You can replace this with any color you want
+  }
+});
+
+// --------------------------------------------------------------------------------------------------
 
 const rows = [
   {
@@ -165,29 +184,29 @@ const PlanTable = () => {
               </TableHead>
               <TableBody>
                 {rows.map((row, idx) => (
-                  <TableRow key={idx}>
-                    <TableCell
-                      component={"td"}
+                  <StyledTableRow key={idx}>
+                    <StyledTableCell
+                      component={"th"}
                       key={row.token}
                       sx={{ fontWeight: "bold", fontSize: 17 }}>
                       {row.token}
-                    </TableCell>
-                    <TableCell
+                    </StyledTableCell>
+                    <StyledTableCell
                       component={"td"}
                       sx={{ borderLeft: "1px solid grey", borderRight: "1px solid grey" }}
                       key={row.free}>
                       {row.free}
-                    </TableCell>
-                    <TableCell
+                    </StyledTableCell>
+                    <StyledTableCell
                       component={"td"}
                       sx={{ borderLeft: "1px solid grey", borderRight: "1px solid grey" }}
                       key={row.pro}>
                       {row.pro}
-                    </TableCell>
-                    <TableCell component={"td"} key={row.business}>
+                    </StyledTableCell>
+                    <StyledTableCell component={"td"} key={row.business}>
                       {row.business}
-                    </TableCell>
-                  </TableRow>
+                    </StyledTableCell>
+                  </StyledTableRow>
                 ))}
               </TableBody>
               <TableFooter>
