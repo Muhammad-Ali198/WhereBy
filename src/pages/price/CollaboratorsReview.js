@@ -1,8 +1,6 @@
 import { Avatar, Box, Typography } from "@mui/material";
 import React from "react";
-import MindfulChef from "../../assets/images/MindfulChef.svg";
-import Miro from "../../assets/images/Miro.svg";
-import Wild from "../../assets/images/Wild.svg";
+import { Miro, MindfulChef, Wild } from "../../assets/AssetsExport";
 
 const reviewData = [
   {

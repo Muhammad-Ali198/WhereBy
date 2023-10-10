@@ -55,9 +55,17 @@ const PlanCards = () => {
                   </Typography>
                 ))}
               </Box>
-              <Box display={"flex"} justifyContent={"center"} p={1}>
-                <Button variant="outlined" sx={{ color: "#211375", px: "6rem", py: "10px" }}>
-                  Get started
+              <Box display={"flex"} justifyContent={"center"} pb={3}>
+                <Button
+                  variant="outlined"
+                  sx={{
+                    color: "#211375",
+                    width: "90%",
+                    borderRadius: 4,
+                    py: 2,
+                    fontWeight: "bold"
+                  }}>
+                  Get STARTED
                 </Button>
               </Box>
             </Paper>
@@ -91,9 +99,17 @@ const PlanCards = () => {
                   </Typography>
                 ))}
               </Box>
-              <Box display={"flex"} justifyContent={"center"} p={1}>
-                <Button variant="outlined" sx={{ color: "#211375", px: "6rem", py: "10px" }}>
-                  Get started
+              <Box display={"flex"} justifyContent={"center"} pb={3}>
+                <Button
+                  variant="outlined"
+                  sx={{
+                    color: "#211375",
+                    width: "90%",
+                    borderRadius: 4,
+                    py: 2,
+                    fontWeight: "bold"
+                  }}>
+                  Get STARTED
                 </Button>
               </Box>
             </Paper>
@@ -127,17 +143,17 @@ const PlanCards = () => {
                   </Typography>
                 ))}
               </Box>
-              <Box display={"flex"} justifyContent={"center"} p={1}>
+              <Box display={"flex"} justifyContent={"center"} pb={3}>
                 <Button
                   variant="contained"
                   sx={{
-                    width: "90%",
                     backgroundColor: "#211375",
-                    px: "6rem",
-                    py: "10px",
-                    whiteSpace: "nowrap"
+                    width: "90%",
+                    borderRadius: 4,
+                    py: 2,
+                    fontWeight: "bold"
                   }}>
-                  Try 14 days free
+                  Try 14 Days Free
                 </Button>
               </Box>
             </Paper>

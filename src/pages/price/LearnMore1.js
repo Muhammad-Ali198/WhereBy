@@ -12,12 +12,12 @@ const LearnMore1 = () => {
         justifyContent={"center"}
         alignItems={"center"}
         flexDirection={"column"}>
-        <Typography variant="h4" mb={3} fontWeight={600}>
+        <Typography variant="h3" mb={4} fontWeight={"bold"} fontFamily={"EB Garamond, serif"}>
           Say goodbye to bad meetings
         </Typography>
         <Button
           variant="contained"
-          sx={{ p: 2, px: 3, borderRadius: 3, backgroundColor: "#211375" }}>
+          sx={{ py: 2, px: 5, borderRadius: 3, backgroundColor: "#211375", fontWeight: "bold" }}>
           Try for free
         </Button>
       </Box>

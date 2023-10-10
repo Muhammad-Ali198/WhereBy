@@ -1,11 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import OutLook from "../../assets/images/OutLook.svg";
-import GoogleDrive from "../../assets/images/GoogleDrive.svg";
-import Slack from "../../assets/images/Slacks.svg";
-import Miro from "../../assets/images/MiroIcon.svg";
-import Trello from "../../assets/images/Trello.svg";
-import Youtube from "../../assets/images/Youtube.svg";
+
+import { Youtube, Miro, GoogleDrive, OutLook, Slack, Trello } from "../../assets/AssetsExport";
 
 const Companies = [
   { name: "Miro", logo: Miro },
@@ -28,7 +24,7 @@ const Integrated = () => {
         display={"flex"}
         justifyContent={"center"}
         alignItems={"center"}>
-        <Typography mt={10} variant="h4">
+        <Typography mt={10} variant="h4" fontWeight={"bold"} fontFamily={"EB Garamond, serif"}>
           Integrated With{" "}
         </Typography>
         <Box

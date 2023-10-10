@@ -9,10 +9,11 @@ import {
   TableFooter,
   TableHead,
   TableRow,
-  Typography
+  Typography,
+  Container
 } from "@mui/material";
 import React from "react";
-import Export6 from "../../assets/images/Export6.svg";
+import { Export6 } from "../../assets/AssetsExport";
 import { styled } from "@mui/system";
 
 const StyledTableCell = styled(TableCell)({
@@ -146,9 +147,14 @@ const rows = [
 
 const PlanTable = () => {
   return (
-    <>
+    <Container disableGutters>
       <Box sx={{ backgroundColor: "white" }} pb={10}>
-        <Typography textAlign={"center"} variant="h4" py={10}>
+        <Typography
+          textAlign={"center"}
+          variant="h3"
+          fontWeight={"600"}
+          py={10}
+          fontFamily={"EB Garamond, serif"}>
           Compare plans & features
         </Typography>
         <Box mx={5}>
@@ -220,7 +226,9 @@ const PlanTable = () => {
                       textAlign: "center",
                       borderBottom: 0
                     }}>
-                    <Button variant="outlined" sx={{ color: "#211375", width: "80%" }}>
+                    <Button
+                      variant="outlined"
+                      sx={{ color: "#211375", width: "80%", borderRadius: 4, py: 2 }}>
                       Get started
                     </Button>
                   </TableCell>
@@ -232,12 +240,27 @@ const PlanTable = () => {
                       textAlign: "center",
                       borderBottom: 0
                     }}>
-                    <Button variant="outlined" sx={{ color: "#211375", width: "80%" }}>
+                    <Button
+                      variant="outlined"
+                      sx={{
+                        color: "#211375",
+                        width: "80%",
+                        borderRadius: 4,
+                        py: 2
+                      }}>
                       Get started
                     </Button>
                   </TableCell>
                   <TableCell component={"td"} sx={{ textAlign: "center", borderBottom: 0 }}>
-                    <Button variant="contained" sx={{ backgroundColor: "#211375", width: "80%" }}>
+                    <Button
+                      variant="contained"
+                      sx={{
+                        backgroundColor: "#211375",
+                        width: "80%",
+                        borderRadius: 4,
+                        py: 2,
+                        fontWeight: "bold"
+                      }}>
                       Try 14 days free
                     </Button>
                   </TableCell>
@@ -252,19 +275,31 @@ const PlanTable = () => {
         justifyContent={"center"}
         alignItems={"center"}
         gap={2}
-        py={10}
+        py={15}
         bgcolor={"white"}>
-        <Typography sx={{ fontSize: "2rem" }} fontFamily={""}>
+        <Typography
+          sx={{ fontSize: "2.5rem" }}
+          fontFamily={"EB Garamond, serif"}
+          fontWeight={"600"}>
           Switching from Zoom?
         </Typography>
         <Button
           variant="contained"
-          sx={{ backgroundColor: "#211375", display: "flex", alignItems: "center", gap: 1 }}>
+          sx={{
+            backgroundColor: "#211375",
+            display: "flex",
+            borderRadius: 4,
+            alignItems: "center",
+            gap: 1,
+            fontWeight: "bold",
+            px: 4,
+            py: 2
+          }}>
           Compare us on
           <img src={Export6} alt="icon" />
         </Button>
       </Box>
-    </>
+    </Container>
   );
 };
 

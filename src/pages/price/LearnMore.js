@@ -1,11 +1,12 @@
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
-import Embeding from "../../assets/images/Embeding.png";
+import { Embeding } from "../../assets/AssetsExport";
 
 const LearnMore = () => {
   return (
     <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
       <Box
+        sx={{ flexDirection: { xs: "column", md: "row" } }}
         bgcolor={"white"}
         width={"88%"}
         height={"60%"}
@@ -20,13 +21,13 @@ const LearnMore = () => {
             If you&apos;re looking for our API product, click below to learn more about our plans
             and get started for free.
           </Typography>
-          <Button variant={"contained"} sx={{ backgroundColor: "#211375", px: 3, py: 1 }}>
+          <Button
+            variant={"contained"}
+            sx={{ backgroundColor: "#211375", fontWeight: "bold", px: 3, py: 1 }}>
             learn more
           </Button>
         </Box>
-        <Box p={10}>
-          <img width={"400rem"} src={Embeding} />
-        </Box>
+        <Box component={"img"} p={10} minWidth={500} src={Embeding} />
       </Box>
     </Box>
   );

@@ -7,7 +7,7 @@ import {
   Typography
 } from "@mui/material";
 import React, { useState } from "react";
-import Faq from "../../assets/images/FAQ.png";
+import { Faq } from "../../assets/AssetsExport";
 import { ExpandMore } from "@mui/icons-material";
 
 const FrequentlyQuestions = () => {
@@ -28,10 +28,10 @@ const FrequentlyQuestions = () => {
           flexDirection: "column",
           backgroundColor: ""
         }}>
-        <Box mb={5}>
+        <Box mb={8}>
           <img width={120} src={Faq} />
         </Box>
-        <Typography fontSize={40} fontWeight={500} mb={5}>
+        <Typography fontSize={48} fontWeight={"bold"} mb={10} fontFamily={"EB Garamond, serif"}>
           Frequently asked questions
         </Typography>
         <Box>
