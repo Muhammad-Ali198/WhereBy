@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Drawer, Toolbar, CssBaseline } from "@mui/material";
+import { Box, Drawer, CssBaseline } from "@mui/material";
 import NavBar from "./NavBar";
 import ResponsiveDrawer from "./ResponsiveDrawer";
 
@@ -47,7 +47,7 @@ const Index = ({ children }) => {
         id="layoutBox"
         onScroll={onScroll}
         sx={{ width: "100%", height: "100vh", overflowX: "hidden" }}>
-        <Toolbar />
+        {/* <Toolbar /> */}
         {/* <h3>asasdasd</h3> */}
         {children}
       </Box>
