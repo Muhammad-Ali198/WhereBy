@@ -3,7 +3,7 @@ import { useRoutes } from "react-router-dom";
 // import SettingComponent from "../pages/settings/Index";
 // import DashbordComponent from "../pages/dashboard/Index";
 
-import { Dashbord, Price, Setting } from "../pages/Index";
+import { Dashbord, Price, Setting, Feature } from "../pages/Index";
 
 const Index = () => {
   let allRouteList = useRoutes([
@@ -28,6 +28,11 @@ const Index = () => {
       //Setting Route//
       path: "price",
       element: <Price />
+    },
+    {
+      //Setting Route//
+      path: "feature",
+      element: <Feature />
     }
   ]);
 

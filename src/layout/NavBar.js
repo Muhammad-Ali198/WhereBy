@@ -51,7 +51,7 @@ const NavBar = ({ handleDrawerToggle, navBgColor }) => {
               flexGrow: 1,
               justifyContent: "space-evenly"
             }}>
-            {["dashboard", "contact", "price", "settings"].map((item) => (
+            {["dashboard", "feature", "price", "settings"].map((item) => (
               <Button
                 key={item}
                 sx={{ color: "black" }}
