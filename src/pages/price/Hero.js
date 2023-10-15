@@ -6,7 +6,7 @@ const Hero = () => {
 
   return (
     <>
-      <Box textAlign={"center"} py={2} mb={10}>
+      <Box textAlign={"center"} py={4} mb={10}>
         <Typography my={5} fontWeight={"bold"} color={"#2B189B"} fontFamily={'"Inter", sans-serif'}>
           Whereby Meeting
         </Typography>

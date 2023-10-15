@@ -1,5 +1,8 @@
-export { default as Embeding } from "./images/Embeding.png";
-export { default as Faq } from "./images/FAQ.png";
+export { default as Embeding } from "./images/price/Embeding.png";
+export { default as Faq } from "./images/price/FAQ.png";
+export { default as Oppla } from "./images/features/Oppla.png";
+export { default as AbstractMan } from "./images/rating/AbstractMan.png";
+export { default as AbstractWoman } from "./images/rating/AbstractWoman.png";
 export { default as NavIcon } from "./Icons/whereby.svg";
 export { default as Miro } from "./Icons/Miro.svg";
 export { default as MindfulChef } from "./Icons/MindfulChef.svg";

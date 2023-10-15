@@ -27,7 +27,7 @@ const LearnMore = () => {
             learn more
           </Button>
         </Box>
-        <Box component={"img"} p={10} minWidth={500} src={Embeding} />
+        <Box component={"img"} p={10} minWidth={"50%"} src={Embeding} />
       </Box>
     </Box>
   );

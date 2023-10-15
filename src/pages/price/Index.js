@@ -1,4 +1,4 @@
-import { Container } from "@mui/material";
+import { Box, Container, Toolbar } from "@mui/material";
 import React from "react";
 import Hero from "./Hero";
 import PlanCards from "./PlanCards";
@@ -13,23 +13,23 @@ import PriceFooter from "./PriceFooter";
 
 const Index = () => {
   return (
-    <Container
-      disableGutters
-      sx={{
-        minHeight: "100vh",
-        backgroundColor: "#F4F4F4"
-      }}>
-      <Hero />
-      <PlanCards />
-      <TrustedCompanies />
-      <PlanTable />
-      <LearnMore />
-      <CollaboratorsReview />
-      <Integrated />
-      <FrequentlyQuestions />
-      <LearnMore1 />
-      <PriceFooter />
-    </Container>
+    <>
+      <Box bgcolor={"#F4F4F4"}>
+        <Toolbar />
+        <Container disableGutters>
+          <Hero />
+          <PlanCards />
+          <TrustedCompanies />
+          <PlanTable />
+          <LearnMore />
+          <CollaboratorsReview />
+          <Integrated />
+          <FrequentlyQuestions />
+          <LearnMore1 />
+          <PriceFooter />
+        </Container>
+      </Box>
+    </>
   );
 };
 
