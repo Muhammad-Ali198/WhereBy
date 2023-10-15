@@ -9,3 +9,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+@font-face {
+  font-family: 'Custom-Roslinda';
+  src: local('Roslinda'), url(./assets/fonts/RoslindaCondense.ttf) format('truetype');
+}

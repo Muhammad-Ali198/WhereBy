@@ -67,16 +67,20 @@ const NavBar = ({ handleDrawerToggle, navBgColor }) => {
               msg={"Login"}
               bgColor={"transparent"}
               color={"#211375"}
-              borderColor={"#211375"}
+              borderColor={"rgb(43, 24, 155)"}
               borderRadius={3}
+              px={2}
+              py={1}
             />
             <ContainedButton
               msg={"Try for free"}
               // varient={"outlined"}
-              bgColor={"#211375"}
+              bgColor={"rgb(43, 24, 155)"}
               color={"white"}
-              borderColor={"#211375"}
+              borderColor={"rgb(43, 24, 155)"}
               borderRadius={3}
+              px={2}
+              py={1}
             />
           </Box>
         </Container>

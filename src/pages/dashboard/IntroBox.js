@@ -6,10 +6,15 @@ const IntroBox = () => {
   return (
     <>
       <Box sx={{ background: "transparent" }}>
-        <Typography fontSize={80} textAlign="center" padding="0px 200px 0px 200px">
+        <Typography
+          fontFamily={"Custom-Roslinda"}
+          gutterBottom
+          fontSize={80}
+          textAlign="center"
+          padding="0px 250px 0px 250px">
           Build your dream video call solution
         </Typography>
-        <Typography fontSize={18} textAlign="center" padding="0px 150px 0px 150px">
+        <Typography fontSize={18} textAlign="center" padding="0px 220px 0px 220px">
           Ditch corporate-looking video calls for a calm, user-friendly option, integrated directly
           into your platform using our API or SDK. Optimized for Digital Mental Health, Telehealth,
           eLearning & more...
@@ -18,7 +23,7 @@ const IntroBox = () => {
       <Box
         component="img"
         sx={{
-          padding: 10,
+          padding: 6,
           width: "-webkit-fill-available"
         }}
         alt="The house from the offer."

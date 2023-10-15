@@ -1,7 +1,15 @@
 import React from "react";
 import { Button } from "@mui/material";
 
-const ContainedButton = ({ msg, bgColor, color, borderColor, borderRadius }) => {
+const ContainedButton = ({
+  msg,
+  bgColor,
+  color,
+  borderColor,
+  borderRadius,
+  // padding = "10px",
+  ...restProps
+}) => {
   return (
     <Button
       disableRipple
@@ -10,6 +18,11 @@ const ContainedButton = ({ msg, bgColor, color, borderColor, borderRadius }) => 
         background: bgColor,
         borderColor: borderColor,
         borderRadius: borderRadius,
+        fontFamily: '"Inter", sans-serif',
+        fontWeight: "bold",
+        textTransform: "none",
+        // padding: padding,
+        ...restProps,
         ":hover": {
           background: bgColor,
           borderColor: borderColor
