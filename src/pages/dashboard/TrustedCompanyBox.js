@@ -13,7 +13,7 @@ const TrustedCompanyBox = () => {
       <Typography pb={6} fontFamily={'"Inter", sans-serif'} fontSize={"18px"} textAlign={"center"}>
         Trusted by 5+ million people at companies like
       </Typography>
-      <Grid container>
+      <Grid container direction="row" alignItems="center" justifyContent="center">
         <Grid
           item
           xs={6}

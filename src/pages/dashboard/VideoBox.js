@@ -40,9 +40,9 @@ const VideoBox = () => {
             <ContainedButton
               msg={"Try for free"}
               // varient={"outlined"}
-              bgColor={"#211375"}
+              bgColor={"rgb(43, 24, 155)"}
               color={"white"}
-              borderColor={"#211375"}
+              borderColor={"rgb(43, 24, 155)"}
               borderRadius={3}
               maxWidth={"200px"}
               py={1}
