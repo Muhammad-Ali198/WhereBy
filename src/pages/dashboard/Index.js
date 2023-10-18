@@ -14,6 +14,7 @@ import {
 import IndustriesThrivingBox from "./IndustriesThrivingBox";
 import SimpleVideoMeetingBox from "./SimpleVideoMeetingBox";
 import DelightfulVideoCallBox from "./DelightfulVideoCallBox";
+import SwipeableReviewsBox from "./SwipeableReviewsBox";
 
 const Index = () => {
   return (
@@ -37,6 +38,9 @@ const Index = () => {
       </Box>
       <Box sx={indexDelightfulVideoCallBox}>
         <DelightfulVideoCallBox />
+      </Box>
+      <Box sx={indexDelightfulVideoCallBox}>
+        <SwipeableReviewsBox />
       </Box>
     </>
   );
