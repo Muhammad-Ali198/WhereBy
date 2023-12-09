@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "@mui/system";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
 import { NavIcon } from "../assets/AssetsExport";
-import { AppBar, Box, Button, IconButton, Toolbar } from "@mui/material";
+import { AppBar, Box, Button, IconButton, Toolbar, Typography } from "@mui/material";
 import { ContainedButton, OutlinedButton } from "../components/ComponentExporter";
+import { Embeding } from "../assets/AssetsExport";
+import VideoCallMeeting from "../assets/images/dashboard/videoCallMeeting.png";
+import { CalculateOutlined, CampaignOutlined, ListOutlined } from "@mui/icons-material";
 
 const NavBar = ({ handleDrawerToggle, navBgColor }) => {
   const navigate = useNavigate();
+
+  const [show, setShow] = useState(null);
 
   return (
     <AppBar
@@ -56,7 +61,8 @@ const NavBar = ({ handleDrawerToggle, navBgColor }) => {
                 key={item}
                 sx={{ color: "black" }}
                 disableRipple
-                onClick={() => navigate(item)}>
+                onClick={() => navigate(item)}
+                onMouseEnter={() => setShow(item)}>
                 {item}
               </Button>
             ))}
@@ -85,6 +91,94 @@ const NavBar = ({ handleDrawerToggle, navBgColor }) => {
           </Box>
         </Container>
       </Toolbar>
+      {show !== null && (
+        <Box
+          display={"flex"}
+          height={350}
+          color={"black"}
+          borderTop={1}
+          onMouseLeave={() => setShow(null)}>
+          <Box flex={"1 1 68%"} bgcolor={""}>
+            <Box p={4}>
+              <Typography fontWeight={"bold"} fontSize={20}>
+                {show === "dashboard" && "Choose the right Whereby for you"}
+                {show === "price" && "Which Whereby product would you like to see pricing for"}
+              </Typography>
+
+              <Box display={"flex"} gap={2} mt={4} b>
+                <Box
+                  display={"flex"}
+                  p={4}
+                  gap={2}
+                  border={"1px solid blue"}
+                  borderRadius={3}
+                  sx={{ "&:hover": { boxShadow: 4 } }}>
+                  <Box component={"img"} src={Embeding} sx={{ width: "40%" }} />
+                  <Box>
+                    <Typography
+                      gutterBottom
+                      fontWeight={"bold"}
+                      color={"#2B189B"}
+                      fontFamily={'"Inter", sans-serif'}>
+                      Whereby Embeded
+                    </Typography>
+                    <Typography gutterBottom paragraph>
+                      Integrated real-time video into your Product via our API
+                    </Typography>
+                  </Box>
+                </Box>
+                <Box
+                  display={"flex"}
+                  p={4}
+                  gap={2}
+                  border={"1px solid blue"}
+                  borderRadius={3}
+                  sx={{ "&:hover": { boxShadow: 4 } }}>
+                  <Box component={"img"} src={VideoCallMeeting} sx={{ width: "40%" }} />
+                  <Box>
+                    <Typography
+                      gutterBottom
+                      fontWeight={"bold"}
+                      color={"#2B189B"}
+                      fontFamily={'"Inter", sans-serif'}>
+                      Whereby Embeded
+                    </Typography>
+                    <Typography gutterBottom paragraph>
+                      Integrated real-time video into your Product via our API
+                    </Typography>
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+          <Box flex={"1 1 32%"} bgcolor={""} borderLeft={1}>
+            <Box p={4}>
+              {show === "dashboard" && (
+                <>
+                  <Box display={"flex"} alignItems={"center"} gap={1}>
+                    <ListOutlined />
+                    <Button disableRipple>Feature</Button>
+                  </Box>
+                  <Box display={"flex"} alignItems={"center"} gap={1}>
+                    <CampaignOutlined />
+                    <Button disableRipple>Whats new!</Button>
+                  </Box>
+                </>
+              )}
+              {show === "price" && (
+                <>
+                  <Box display={"flex"} alignItems={"center"} gap={1}>
+                    <CalculateOutlined />
+                    <Button disableRipple sx={{ color: "black" }}>
+                      Rate Calculator
+                    </Button>
+                  </Box>
+                </>
+              )}
+            </Box>
+          </Box>
+        </Box>
+      )}
     </AppBar>
   );
 };
