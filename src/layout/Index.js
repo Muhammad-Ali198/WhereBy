@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Box, Drawer, CssBaseline } from "@mui/material";
 import NavBar from "./NavBar";
 import ResponsiveDrawer from "./ResponsiveDrawer";
+import PriceFooter from "../utils/PriceFooter";
 
 const Index = ({ children }) => {
   // const { window } = props;
@@ -50,6 +51,7 @@ const Index = ({ children }) => {
         {/* <Toolbar /> */}
         {/* <h3>asasdasd</h3> */}
         {children}
+        <PriceFooter />
       </Box>
     </Box>
   );

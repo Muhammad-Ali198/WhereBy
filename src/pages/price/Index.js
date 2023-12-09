@@ -9,7 +9,6 @@ import CollaboratorsReview from "./CollaboratorsReview";
 import Integrated from "./Integrated";
 import FrequentlyQuestions from "./FrequentlyQuestions";
 import LearnMore1 from "./LearnMore1";
-import PriceFooter from "./PriceFooter";
 
 const Index = () => {
   return (
@@ -26,7 +25,6 @@ const Index = () => {
           <Integrated />
           <FrequentlyQuestions />
           <LearnMore1 />
-          <PriceFooter />
         </Container>
       </Box>
     </>
