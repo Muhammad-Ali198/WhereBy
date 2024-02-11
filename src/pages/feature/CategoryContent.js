@@ -10,17 +10,19 @@ import {
   Typography
 } from "@mui/material";
 import React from "react";
-import { Element } from "react-scroll";
+// import { Element } from "react-scroll";
 
 const CategoryContent = () => {
   return (
     <Box width={"100%"}>
       {gridTest.map((itm) => (
-        <Element key={itm.name} id={itm.name}>
+        // <Element key={itm.name} id={itm.name} name={itm.name}>
+        <>
           <Typography
+            id={itm.name} //Id added to locate that element
             variant="h3"
             fontWeight={"bold"}
-            fontFamily={'"EB Garamond", serif'}
+            fontFamily={"Custom-Roslinda"}
             gutterBottom>
             {itm.name}
           </Typography>
@@ -33,7 +35,7 @@ const CategoryContent = () => {
             <Grid container spacing={3}>
               {itm.times.map((time) => (
                 <Grid bgcolor={""} item xs={12} md={6} key={time}>
-                  <Card raised>
+                  <Card sx={{ boxShadow: "none", p: 2 }}>
                     <CardContent>
                       <Typography
                         gutterBottom
@@ -63,7 +65,8 @@ const CategoryContent = () => {
             </Grid>
           </Box>
           <Divider sx={{ my: 6 }} />
-        </Element>
+          {/* </Element> */}
+        </>
       ))}
     </Box>
   );

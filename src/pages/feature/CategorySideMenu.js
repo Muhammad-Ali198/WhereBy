@@ -12,11 +12,18 @@ import {
 import { Box, Typography } from "@mui/material";
 import { green } from "@mui/material/colors";
 import React from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+// import { Link, animateScroll as scroll } from "react-scroll";
 
 const CategorySideMenu = () => {
-  const handleClick = (name) => {
-    scroll.scrollTo(name);
+  // const handleClick = (name) => {
+  //   scroll.scrollTo(name);
+  // };
+
+  const handleClick = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -29,30 +36,30 @@ const CategorySideMenu = () => {
       <Box p={3}>
         <Typography color={"gray"}>Catogory:</Typography>
         {CatogoryMenuDate.map((itm) => (
-          <Link
+          // <Link
+          //   key={itm.name}
+          //   to={itm.name}
+          //   smooth={true}
+          //   duration={400}
+          //   activeClass="active"
+          //   spy={true}
+          //   offset={-70}>
+          <Box
             key={itm.name}
-            to={itm.name}
-            smooth={true}
-            duration={400}
-            activeClass="active"
-            spy={true}
-            offset={-70}>
-            <Box
-              key={itm.name}
-              sx={{ "&:hover": { bgcolor: green[100] }, cursor: "pointer" }}
-              display={"flex"}
-              gap={1}
-              justifyContent={"flex-start"}
-              alignItems={"center"}
-              borderRadius={3}
-              ml={1}
-              my={1.5}
-              p={1}
-              onClick={() => handleClick(itm.name)}>
-              <itm.icon />
-              <Typography>{itm.name}</Typography>
-            </Box>
-          </Link>
+            sx={{ "&:hover": { bgcolor: green[100] }, cursor: "pointer" }}
+            display={"flex"}
+            gap={1}
+            justifyContent={"flex-start"}
+            alignItems={"center"}
+            borderRadius={3}
+            ml={1}
+            my={1.5}
+            onClick={() => handleClick(itm.name)}
+            p={1}>
+            <itm.icon />
+            <Typography>{itm.name}</Typography>
+          </Box>
+          // </Link>
         ))}
       </Box>
     </Box>

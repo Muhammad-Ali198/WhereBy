@@ -17,7 +17,11 @@ const NavBar = ({ handleDrawerToggle, navBgColor }) => {
   return (
     <AppBar
       elevation={navBgColor == "transparent" ? 0 : 1}
-      sx={{ background: navBgColor, transition: "background .5s ease-in" }}
+      sx={{
+        background: navBgColor,
+        transition: "background .5s ease-in",
+        "&:hover": { background: "white" }
+      }}
       component="nav">
       <Toolbar sx={{ background: "transparent" }}>
         <Container
@@ -61,7 +65,7 @@ const NavBar = ({ handleDrawerToggle, navBgColor }) => {
                 key={item}
                 sx={{ color: "black" }}
                 disableRipple
-                onClick={() => navigate(item)}
+                onClick={() => item !== "settings" && navigate(item)}
                 onMouseEnter={() => setShow(item)}>
                 {item}
               </Button>
@@ -93,15 +97,19 @@ const NavBar = ({ handleDrawerToggle, navBgColor }) => {
       </Toolbar>
       {show !== null && (
         <Box
-          display={"flex"}
-          height={350}
-          color={"black"}
-          borderTop={1}
+          display="flex"
+          sx={{
+            transition: "background 0.5s ease-in",
+            height: 350,
+            color: "black",
+            borderTop: 1,
+            bgcolor: "white"
+          }}
           onMouseLeave={() => setShow(null)}>
           <Box flex={"1 1 68%"} bgcolor={""}>
             <Box p={4}>
               <Typography fontWeight={"bold"} fontSize={20}>
-                {show === "dashboard" && "Choose the right Whereby for you"}
+                {show !== "price" && "Choose the right Whereby for you"}
                 {show === "price" && "Which Whereby product would you like to see pricing for"}
               </Typography>
 

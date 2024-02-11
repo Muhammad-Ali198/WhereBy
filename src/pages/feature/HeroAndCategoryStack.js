@@ -11,7 +11,7 @@ const HeroAndCategoryStack = () => {
           sx={{ mx: { xs: 5, md: 35 } }}
           fontWeight={"bold"}
           variant="h3"
-          fontFamily={'"EB Garamond", serif'}>
+          fontFamily={"Custom-Roslinda"}>
           Check out the features that you can get with Whereby
         </Typography>
       </Box>
